@@ -1,0 +1,48 @@
+@font-face {
+    font-family: "Onest";
+    src: url('./OnestThin1602-hint.ttf');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Onest";
+    src: url('./OnestLight1602-hint.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Onest";
+    src: url('./OnestRegular1602-hint.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Onest";
+    src: url('./OnestMedium1602-hint.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Onest";
+    src: url('./OnestBold1602-hint.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Onest";
+    src: url('./OnestExtraBold1602-hint.ttf');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Onest";
+    src: url('./OnestBlack1602-hint.ttf');
+    font-weight: 900;
+    font-style: normal;
+}
