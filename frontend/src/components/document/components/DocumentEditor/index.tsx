@@ -19,12 +19,6 @@ export default function DocumentEditor(){
             <p>Try generating text from Chat PT for your legal document.</p>
             <div className={'mt-3'}>
                <textarea />
-                // <Editor
-               //     editorState={editorState}
-               //     wrapperClassName="demo-wrapper"
-               //     editorClassName="demo-editor"
-               //     onEditorStateChange={setEditorState}
-               // />
             </div>
         </div>
     )
