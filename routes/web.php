@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return route('chatgpt.get-message-by-prompt');
     return ['Laravel' => app()->version()];
 });
 
