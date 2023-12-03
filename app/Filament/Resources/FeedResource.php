@@ -62,4 +62,9 @@ class FeedResource extends Resource
     {
         return false;
     }
+
+    public static function getEloquentQuery(): Builder
+    {
+        return parent::getEloquentQuery()->where(['is_public'=>1]);
+    }
 }
