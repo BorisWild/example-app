@@ -25,7 +25,7 @@ return [
     |
     | This value determines the "environment" your application is currently
     | running in. This may determine how you prefer to configure various
-    | services the application utilizes. Set this in your ".env" file.
+    | services the application utilizes. Set this in your ".env.local" file.
     |
     */
 
@@ -56,8 +56,6 @@ return [
     */
 
     'url' => env('APP_URL', 'http://localhost'),
-
-    'frontend_url' => env('FRONTEND_URL', 'http://localhost:3000'),
 
     'asset_url' => env('ASSET_URL'),
 
@@ -169,6 +167,7 @@ return [
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
+        App\Providers\Filament\AdminPanelProvider::class,
         App\Providers\RouteServiceProvider::class,
     ])->toArray(),
 
@@ -187,4 +186,13 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
+
+    /*
+   |--------------------------------------------------------------------------
+   | Public folder
+   |--------------------------------------------------------------------------
+   |
+   */
+
+    'public_folder' => env('PUBLIC_FOLDER', 'public'),
 ];
