@@ -50,6 +50,7 @@ class FeedResource extends Resource
             'index' => Pages\ListFeeds::route('/'),
             //'create' => Pages\CreateFeed::route('/create'),
             'edit' => Pages\EditFeed::route('/{record}/edit'),
+            'view' => Pages\ViewFeed::route('/{record}/view'),
         ];
     }
 
