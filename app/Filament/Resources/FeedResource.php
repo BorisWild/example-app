@@ -6,6 +6,8 @@ use App\Filament\Resources\FeedResource\Pages;
 use App\Filament\Resources\FeedResource\RelationManagers;
 use App\Models\Contract;
 use Filament\Forms;
+use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
