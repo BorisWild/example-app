@@ -25,10 +25,16 @@ class FeedResource extends Resource
 
     public static function form(Form $form): Form
     {
-        return $form
-            ->schema([
-                //
-            ]);
+        return $form->schema([
+            TextInput::make('title')
+                ->maxLength(255)
+                ->columnSpanFull(),
+            RichEditor::make('text')
+                ->disableToolbarButtons([
+                    'attachFiles',
+                ])
+                ->columnSpanFull(),
+        ]);
     }
 
     public static function table(Table $table): Table
@@ -49,7 +55,7 @@ class FeedResource extends Resource
         return [
             'index' => Pages\ListFeeds::route('/'),
             //'create' => Pages\CreateFeed::route('/create'),
-            'edit' => Pages\EditFeed::route('/{record}/edit'),
+            //'edit' => Pages\EditFeed::route('/{record}/edit'),
             'view' => Pages\ViewFeed::route('/{record}/view'),
         ];
     }
