@@ -23,7 +23,7 @@ class EditContract extends EditRecord
                     return response()->streamDownload(
 function() use ($record){
  echo PdfService::stream($record);
-}, $record->id);
+}, $record->id.'.pdf');
 
 
                 })
