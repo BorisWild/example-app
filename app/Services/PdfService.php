@@ -20,8 +20,7 @@ class PdfService implements PdfServiceInterface
     public static function stream(Model $model): \Illuminate\Http\Response
     {
         //Log::info($model->text);
-        return App::make('dompdf.wrapper')
-            ->loadHTML($model->text)
+        return Pdf::loadHTML($model->text)
             ->stream();
     }
 }
