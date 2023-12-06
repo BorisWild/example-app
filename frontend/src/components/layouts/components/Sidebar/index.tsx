@@ -1,6 +1,7 @@
 "use client"
 
 import {BellIcon, PlusSquareIcon, Search2Icon, SettingsIcon, StarIcon, TimeIcon} from "@chakra-ui/icons";
+import classNames from "classnames";
 
 
 interface ISidebarItem{
@@ -14,7 +15,11 @@ interface ISidebarItemDocument{
     icon?: any;
 }
 
-export default function Sidebar(){
+interface ISidebar{
+    isMobile?: boolean;
+}
+
+export default function Sidebar( props : ISidebar ){
 
     const SidebarItem = ( item: ISidebarItem ) => {
 
@@ -66,8 +71,14 @@ export default function Sidebar(){
         },
     ]
 
+    const cls : string[] = [];
+
+    if ( !props?.isMobile ){
+        cls.push('md:flex hidden min-w-[14rem] w-[14rem] bg-neutral-100 border-r-[1px] border-solid border-gray-200')
+    }
+
     return (
-        <div className={'min-w-[14rem] w-[14rem] bg-neutral-100 border-r-[1px] border-solid border-gray-200'}>
+        <div className={classNames( cls.join(' ') )}>
             <div className={'px-2'}>
                 <div className={'py-5'}>
                     {

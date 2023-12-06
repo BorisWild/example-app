@@ -1,9 +1,14 @@
+import classNames from "classnames";
 
 interface IHistoryItem {
     title: string;
     index?: number
 }
-export default function History(){
+
+interface IHistory{
+    isMobile?: boolean;
+}
+export default function History( props : IHistory ){
 
     const HistoryItem = ( item : IHistoryItem ) => {
         return (
@@ -25,8 +30,14 @@ export default function History(){
         },
     ]
 
+    const cls : string[] = [];
+
+    if ( !props?.isMobile ){
+        cls.push('xl:block hidden min-w-[18.5rem] w-[18.5rem] border-l-[1px] border-solid border-gray-200 px-3 py-3')
+    }
+
     return (
-        <div className={'min-w-[18.5rem] w-[18.5rem] border-l-[1px] border-solid border-gray-200 px-3 py-3'}>
+        <div className={classNames( cls.join(' ')) }>
             <div className={'font-bold text-gray-700 mb-3'}>
                 History of changes
             </div>
