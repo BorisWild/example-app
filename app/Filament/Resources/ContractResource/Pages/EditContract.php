@@ -20,7 +20,12 @@ class EditContract extends EditRecord
             Actions\DeleteAction::make(),
             Action::make('export')->
                 action(function (Contract $record) {
-                    PdfService::download($record);
+                    return response()->streamDownload(
+function() use ($record){
+ echo PdfService::stream($record);
+}, $record->id.'.pdf');
+
+
                 })
                 ->label('Export')
                 ->color('warning')
