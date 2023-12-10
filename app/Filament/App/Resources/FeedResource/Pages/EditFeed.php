@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\FeedResource\Pages;
+namespace App\Filament\App\Resources\FeedResource\Pages;
 
-use App\Filament\Resources\FeedResource;
+use App\Filament\App\Resources\FeedResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 

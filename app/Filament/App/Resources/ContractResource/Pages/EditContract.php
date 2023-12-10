@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Filament\Resources\ContractResource\Pages;
+namespace App\Filament\App\Resources\ContractResource\Pages;
 
 use App\Events\PdfExportEvent;
+use App\Filament\App\Resources\ContractResource;
 use App\Models\Contract;
-use App\Filament\Resources\ContractResource;
 use App\Services\PdfService;
 use Filament\Actions;
 use Filament\Actions\Action;

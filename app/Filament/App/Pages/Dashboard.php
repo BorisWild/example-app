@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Pages;
+namespace App\Filament\App\Pages;
 
-use App\Filament\Resources\DashboardResource\Widgets\AllProducts;
+use App\Filament\App\Resources\DashboardResource\Widgets\AllProducts;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Form;

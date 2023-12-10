@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\DashboardResource\Widgets;
+namespace App\Filament\App\Resources\DashboardResource\Widgets;
 
 use App\Models\Product;
 use Filament\Tables;

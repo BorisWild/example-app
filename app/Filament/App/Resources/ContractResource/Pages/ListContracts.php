@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\ContractResource\Pages;
+namespace App\Filament\App\Resources\ContractResource\Pages;
 
-use App\Filament\Resources\ContractResource;
+use App\Filament\App\Resources\ContractResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 

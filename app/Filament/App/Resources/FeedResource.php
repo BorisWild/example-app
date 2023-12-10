@@ -1,19 +1,16 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\App\Resources;
 
 use App\Filament\Resources\FeedResource\Pages;
 use App\Filament\Resources\FeedResource\RelationManagers;
 use App\Models\Contract;
-use Filament\Forms;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class FeedResource extends Resource
 {
@@ -55,10 +52,10 @@ class FeedResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListFeeds::route('/'),
+            'index' => \App\Filament\App\Resources\FeedResource\Pages\ListFeeds::route('/'),
             //'create' => Pages\CreateFeed::route('/create'),
             //'edit' => Pages\EditFeed::route('/{record}/edit'),
-            'view' => Pages\ViewFeed::route('/{record}/view'),
+            'view' => \App\Filament\App\Resources\FeedResource\Pages\ViewFeed::route('/{record}/view'),
         ];
     }
 

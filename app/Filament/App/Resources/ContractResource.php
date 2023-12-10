@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\App\Resources;
 
 use App\Filament\Resources\ContractResource\Pages;
 use App\Filament\Resources\ContractResource\RelationManagers;
-use App\Models\Contract;
-use Filament\Forms;
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
@@ -14,8 +13,6 @@ use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Filament\Forms\Components\RichEditor;
 
 class ContractResource extends Resource
 {
@@ -92,9 +89,9 @@ class ContractResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListContracts::route('/'),
-            'create' => Pages\CreateContract::route('/create'),
-            'edit' => Pages\EditContract::route('/{record}/edit'),
+            'index' => \App\Filament\App\Resources\ContractResource\Pages\ListContracts::route('/'),
+            'create' => \App\Filament\App\Resources\ContractResource\Pages\CreateContract::route('/create'),
+            'edit' => \App\Filament\App\Resources\ContractResource\Pages\EditContract::route('/{record}/edit'),
         ];
     }
 
