@@ -22,7 +22,7 @@ class ContractPolicy
      */
     public function view(User $user, Contract $product): bool
     {
-        return $user->id===$product->user_id;
+        return $user->id===$product->user_id || $product->is_public===true;
     }
 
     /**
