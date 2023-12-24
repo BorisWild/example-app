@@ -51,13 +51,13 @@ export function Chat({ id, initialMessages, className }: ChatProps) {
           toast.error(response.statusText)
         }
       },
-      onFinish() {
-        if (!path.includes('chat')) {
-          //router.push(`/chat/${id}`, { shallow: true, scroll: false })
-          router.push(process.env.NODE_ENV === "production" ? `/frontend/chat/${id}` : `/chat/${id}`, {scroll: false })
-          router.refresh()
-        }
-      }
+      // onFinish() {
+      //   if (!path.includes('chat')) {
+      //     //router.push(`/chat/${id}`, { shallow: true, scroll: false })
+      //     router.push(process.env.NODE_ENV === "production" ? `/frontend/chat/${id}` : `/chat/${id}`, {scroll: false })
+      //     router.refresh()
+      //   }
+      // }
     })
   return (
     <>
