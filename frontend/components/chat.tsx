@@ -39,6 +39,7 @@ export function Chat({ id, initialMessages, className }: ChatProps) {
   const [previewTokenInput, setPreviewTokenInput] = useState(previewToken ?? '')
   const { messages, append, reload, stop, isLoading, input, setInput } =
     useChat({
+      api: process.env.NODE_ENV === "production" ? '/frontend/api/chat' : '/api/chat',
       initialMessages,
       id,
       body: {
@@ -53,7 +54,7 @@ export function Chat({ id, initialMessages, className }: ChatProps) {
       onFinish() {
         if (!path.includes('chat')) {
           //router.push(`/chat/${id}`, { shallow: true, scroll: false })
-          router.push(`/chat/${id}`, {scroll: false })
+          router.push(process.env.NODE_ENV === "production" ? `/frontend/chat/${id}` : `/chat/${id}`, {scroll: false })
           router.refresh()
         }
       }
