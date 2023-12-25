@@ -11,6 +11,7 @@ use Laravel\Sanctum\HasApiTokens;
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Panel;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -61,5 +62,10 @@ class User extends Authenticatable implements MustVerifyEmail
     public function contracts(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
         return $this->hasMany(Contract::class);
+    }
+
+    public function balance(): HasOne 
+    {
+        return $this->hasOne(Balance::class);
     }
 }
