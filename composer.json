@@ -81,7 +81,7 @@
         {
             "type": "package",
             "package": {
-                "name": "socialment-uuid", 
+                "name": "BorisWild/socialment-uuid", 
                 "version": "1.0",
                 "source": {
                     "url": "https://github.com/BorisWild/socialment-uuid.git",
