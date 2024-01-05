@@ -9,10 +9,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('connected_accounts', function (Blueprint $table) {
-			$table->uuid('id');
+			$table->id('id');
             $table->primary('id');
             
-			$table->uuid('user_id')->nullable();
+			$table->uuid('user_id');
 			$table->foreign('user_id')
 			->references('id')
 			->on('users')
