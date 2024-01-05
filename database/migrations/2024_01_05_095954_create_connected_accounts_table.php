@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('connected_accounts', function (Blueprint $table) {
 			$table->id('id');
-            $table->primary('id');
+            
             
 			$table->uuid('user_id');
 			$table->foreign('user_id')
