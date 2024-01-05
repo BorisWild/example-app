@@ -11,7 +11,7 @@
         "php": "^8.1",
         "barryvdh/laravel-dompdf": "^2.0",
         "bezhansalleh/filament-shield": "^3.1",
-        "chrisreedio/socialment": "^3.4",
+        
         "filament/filament": "^v3.1.0",
         "filament/infolists": "^3.1.0",
         "guzzlehttp/guzzle": "^7.2",
@@ -20,7 +20,8 @@
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
-        "socialiteproviders/google": "^4.1"
+        "socialiteproviders/google": "^4.1",
+        "socialment-uuid": "^1"
     },
     "require-dev": {
         "doctrine/dbal": "^3.7",
@@ -75,5 +76,19 @@
         }
     },
     "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "socialment-uuid", 
+                "version": "1.0",
+                "source": {
+                    "url": "https://github.com/BorisWild/socialment-uuid.git",
+                    "type": "git",
+                    "reference": "3.x"
+                }
+            }
+        }]
+      
 }
