@@ -60,7 +60,8 @@ class AppPanelProvider extends PanelProvider
             ])
                            ->plugin(
  [
-\Hasnayeen\Themes\ThemesPlugin::make(),               \ChrisReedIO\Socialment\SocialmentPlugin::make()
+\Hasnayeen\Themes\ThemesPlugin::make(), 
+              \ChrisReedIO\Socialment\SocialmentPlugin::make()
 ]
  
             )
