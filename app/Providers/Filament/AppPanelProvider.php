@@ -58,9 +58,11 @@ class AppPanelProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
             ])
-            ->plugin(
-                \ChrisReedIO\Socialment\SocialmentPlugin::make(),
-                \Hasnayeen\Themes\ThemesPlugin::make()
+                           ->plugin(
+ [
+\Hasnayeen\Themes\ThemesPlugin::make(),               \ChrisReedIO\Socialment\SocialmentPlugin::make()
+]
+ 
             )
             ->middleware([
                 \Hasnayeen\Themes\Http\Middleware\SetTheme::class
