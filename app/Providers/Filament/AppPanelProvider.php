@@ -59,12 +59,14 @@ class AppPanelProvider extends PanelProvider
                 Authenticate::class,
             ])
             ->plugin(
+                \ChrisReedIO\Socialment\SocialmentPlugin::make(),
                 \Hasnayeen\Themes\ThemesPlugin::make()
             )
             ->middleware([
                 \Hasnayeen\Themes\Http\Middleware\SetTheme::class
             ])
             ->sidebarCollapsibleOnDesktop()
-            ->spa();
+            ->spa()
+            ;
     }
 }
