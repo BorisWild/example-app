@@ -21,7 +21,7 @@
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "socialiteproviders/google": "^4.1",
-        "boriswild/socialment-uuid": "^1"
+        "boriswild/socialment-uuid": "^1.0"
     },
     "require-dev": {
         "doctrine/dbal": "^3.7",
