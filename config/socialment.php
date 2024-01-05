@@ -8,7 +8,7 @@ return [
     'providers' => [
         // Use the key based on the provider's documentation
         'google' => [
-         	'icon' => 'fa-google', // Font Awesome icon class
+         	'icon' => 'fab-google', // Font Awesome icon class
          	'label' => 'Google', // The label to display for the provider
         ]
     ],
